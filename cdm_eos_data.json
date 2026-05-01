@@ -1,0 +1,239 @@
+{
+    "_metadata": {
+        "description": "Rubrik CDM End-of-Support dates and upgrade paths",
+        "last_updated": "2025-01-15",
+        "source": "Rubrik Support Portal and Release Notes",
+        "note": "Update this file when Rubrik publishes new EOS dates or upgrade paths."
+    },
+    "eos_dates": {
+        "5.0": {
+            "status": "NOT_SUPPORTED",
+            "eos_date": "2020-12-31",
+            "eol_date": "2021-06-30",
+            "ga_date": "2018-03-01",
+            "notes": "End of life. Upgrade immediately."
+        },
+        "5.1": {
+            "status": "NOT_SUPPORTED",
+            "eos_date": "2021-06-30",
+            "eol_date": "2021-12-31",
+            "ga_date": "2018-09-01",
+            "notes": "End of life. Upgrade immediately."
+        },
+        "5.2": {
+            "status": "NOT_SUPPORTED",
+            "eos_date": "2021-09-30",
+            "eol_date": "2022-03-31",
+            "ga_date": "2019-03-01",
+            "notes": "End of life. Upgrade immediately."
+        },
+        "5.3": {
+            "status": "NOT_SUPPORTED",
+            "eos_date": "2022-03-31",
+            "eol_date": "2022-09-30",
+            "ga_date": "2019-09-01",
+            "notes": "End of life. Upgrade immediately."
+        },
+        "6.0": {
+            "status": "NOT_SUPPORTED",
+            "eos_date": "2022-09-30",
+            "eol_date": "2023-03-31",
+            "ga_date": "2020-03-01",
+            "notes": "End of life. Upgrade immediately."
+        },
+        "7.0": {
+            "status": "NOT_SUPPORTED",
+            "eos_date": "2023-06-30",
+            "eol_date": "2023-12-31",
+            "ga_date": "2021-03-01",
+            "notes": "End of life. Upgrade immediately."
+        },
+        "8.0": {
+            "status": "NOT_SUPPORTED",
+            "eos_date": "2024-03-31",
+            "eol_date": "2024-09-30",
+            "ga_date": "2022-03-01",
+            "notes": "End of life. Upgrade required."
+        },
+        "8.1": {
+            "status": "NOT_SUPPORTED",
+            "eos_date": "2024-09-30",
+            "eol_date": "2025-03-31",
+            "ga_date": "2022-09-01",
+            "notes": "End of support. Upgrade required."
+        },
+        "9.0": {
+            "status": "APPROACHING_EOS",
+            "eos_date": "2025-06-30",
+            "eol_date": "2025-12-31",
+            "ga_date": "2023-03-01",
+            "notes": "Approaching end of support. Plan upgrade."
+        },
+        "9.1": {
+            "status": "CURRENT",
+            "eos_date": "2025-12-31",
+            "eol_date": "2026-06-30",
+            "ga_date": "2023-09-01",
+            "notes": "Currently supported."
+        },
+        "9.2": {
+            "status": "CURRENT",
+            "eos_date": "2026-06-30",
+            "eol_date": "2026-12-31",
+            "ga_date": "2024-03-01",
+            "notes": "Currently supported."
+        },
+        "9.3": {
+            "status": "CURRENT",
+            "eos_date": "2026-12-31",
+            "eol_date": "2027-06-30",
+            "ga_date": "2024-06-01",
+            "notes": "Currently supported."
+        },
+        "9.4": {
+            "status": "CURRENT",
+            "eos_date": "2027-06-30",
+            "eol_date": "2027-12-31",
+            "ga_date": "2024-09-01",
+            "notes": "Currently supported. Known issues: Nutanix AHV regressions, Oracle RAC timezone (9.4.1/9.4.2), AD backup hanging (9.4.3)."
+        },
+        "9.5": {
+            "status": "CURRENT",
+            "eos_date": "2027-12-31",
+            "eol_date": "2028-06-30",
+            "ga_date": "2025-01-01",
+            "notes": "Currently supported. API token deprecation in 9.5.1+. Azure SSD v2 required for cloud clusters."
+        }
+    },
+    "upgrade_paths": {
+        "5.0": {
+            "direct_upgrade_to": ["5.1", "5.2", "5.3"],
+            "recommended_intermediate": "5.3",
+            "notes": "Must upgrade through 5.3 before 7.0+."
+        },
+        "5.1": {
+            "direct_upgrade_to": ["5.2", "5.3"],
+            "recommended_intermediate": "5.3",
+            "notes": "Must upgrade through 5.3 before 7.0+."
+        },
+        "5.2": {
+            "direct_upgrade_to": ["5.3", "6.0"],
+            "recommended_intermediate": "6.0",
+            "notes": "Can go to 6.0 directly."
+        },
+        "5.3": {
+            "direct_upgrade_to": ["6.0", "7.0"],
+            "recommended_intermediate": "7.0",
+            "notes": "Can jump to 7.0 directly."
+        },
+        "6.0": {
+            "direct_upgrade_to": ["7.0", "8.0"],
+            "recommended_intermediate": "7.0",
+            "notes": "Can jump to 7.0 or 8.0."
+        },
+        "7.0": {
+            "direct_upgrade_to": ["8.0", "8.1", "9.0"],
+            "recommended_intermediate": "8.1",
+            "notes": "Can go to 8.x or 9.0 directly."
+        },
+        "8.0": {
+            "direct_upgrade_to": ["8.1", "9.0", "9.1"],
+            "recommended_intermediate": "9.0",
+            "notes": "Can go to 8.1 or 9.x directly."
+        },
+        "8.1": {
+            "direct_upgrade_to": ["9.0", "9.1", "9.2"],
+            "recommended_intermediate": "9.1",
+            "notes": "Can jump to 9.x directly."
+        },
+        "9.0": {
+            "direct_upgrade_to": ["9.1", "9.2", "9.3", "9.4", "9.5"],
+            "recommended_intermediate": null,
+            "notes": "Direct upgrade within 9.x supported."
+        },
+        "9.1": {
+            "direct_upgrade_to": ["9.2", "9.3", "9.4", "9.5"],
+            "recommended_intermediate": null,
+            "notes": "Direct upgrade within 9.x supported."
+        },
+        "9.2": {
+            "direct_upgrade_to": ["9.3", "9.4", "9.5"],
+            "recommended_intermediate": null,
+            "notes": "Direct upgrade within 9.x supported."
+        },
+        "9.3": {
+            "direct_upgrade_to": ["9.4", "9.5"],
+            "recommended_intermediate": null,
+            "notes": "Direct upgrade within 9.x supported."
+        },
+        "9.4": {
+            "direct_upgrade_to": ["9.5"],
+            "recommended_intermediate": null,
+            "notes": "Direct upgrade to 9.5 supported."
+        }
+    },
+    "version_risks": {
+        "9.4.0": {
+            "known_issues": [
+                "Nutanix AHV regressions",
+                "NAS relic fileset visibility changes"
+            ],
+            "severity": "MEDIUM"
+        },
+        "9.4.1": {
+            "known_issues": [
+                "Oracle RAC ORA-01882 timezone issue",
+                "AWS S3 archival behavior changes",
+                "Nutanix AHV regressions"
+            ],
+            "severity": "HIGH"
+        },
+        "9.4.2": {
+            "known_issues": [
+                "Oracle RAC ORA-01882 timezone issue",
+                "Nutanix AHV regressions"
+            ],
+            "severity": "MEDIUM"
+        },
+        "9.4.3": {
+            "known_issues": [
+                "Active Directory backup hanging issue",
+                "Nutanix AHV regressions mostly resolved"
+            ],
+            "severity": "MEDIUM"
+        },
+        "9.5.0": {
+            "known_issues": [
+                "Azure SSD v2 disk type required for cloud clusters",
+                "S3 Glacier Deep Archive integration changes"
+            ],
+            "severity": "MEDIUM"
+        },
+        "9.5.1": {
+            "known_issues": [
+                "Legacy CDM API token support REMOVED",
+                "CDM local service account behavior changes",
+                "Scripts using CDM API tokens will break"
+            ],
+            "severity": "CRITICAL"
+        }
+    },
+    "cdm_api_deprecations": {
+        "9.5.1": {
+            "deprecated": [
+                "CDM local API token authentication",
+                "CDM local service account creation"
+            ],
+            "migration_path": "Migrate to RSC Service Accounts",
+            "documentation": "https://docs.rubrik.com/en-us/saas/cdm/service-accounts.html"
+        }
+    },
+    "minimum_rsc_versions": {
+        "9.0": "RSC 2023.03+",
+        "9.1": "RSC 2023.09+",
+        "9.2": "RSC 2024.03+",
+        "9.3": "RSC 2024.06+",
+        "9.4": "RSC 2024.09+",
+        "9.5": "RSC 2025.01+"
+    }
+}
